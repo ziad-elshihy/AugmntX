@@ -96,3 +96,20 @@ svg {
    top: 50%;
    transform: translateY(-50%);
 }
+
+.icon {
+   box-shadow: 3px 5px 4px 0 rgb(82 113 255);
+}
+
+.show {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
+   opacity: 0;
+   transition: 0.3s;
+}
+
+.icon-1:hover .show {
+   opacity: 1;
+   gap: 20px;
+}

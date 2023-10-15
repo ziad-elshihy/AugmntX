@@ -31,7 +31,7 @@ const Table = () => {
                <span className="font-[700] text-[#343f52] text-[20px] w-[50%] lg:w-[25%]   flex items-center gap-2">
                   <BsCodeSlash />Technical skills
                </span>
-               <span className="flex justify-between w-full lg:gap-10">
+               <span className="flex justify-between w-full lg:w-[60%] lg:gap-10">
                   <span className="text-[#60697b] text-[18px] flex flex-col gap-4 ">
                      <span>
                         Python

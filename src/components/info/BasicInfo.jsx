@@ -39,22 +39,22 @@ const BasicInfo = () => {
             </div>
          </div>
          <div className='flex flex-wrap gap-3'>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-gray-100 '>
+            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillOne}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-gray-100 '>
+            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillTow}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-gray-100 '>
+            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillThree}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-gray-100 '>
+            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillOne}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-gray-100 '>
+            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillTow}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-gray-100 '>
+            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillThree}
             </span>
          </div>
