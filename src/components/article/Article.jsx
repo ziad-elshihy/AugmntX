@@ -35,31 +35,35 @@ const Article = () => {
                      <div
                         key={index}
                         className='shadow cursor-pointer'
-                        onClick={goUser}
+                     >
+                        <div
+                           onClick={goUser}
                         >
-                        <div className='flex gap-6 '>
-                           <div className='max-w-[80px] max-h-[80px] rounded-full  img-shadow'>
-                              <img src={image} alt="profile" className='w-full rounded-full' />
-                           </div>
-                           <div className='flex flex-col gap-2'>
-                              <span className='flex gap-1 items-center'>
-                                 <p className='font-[700]'>{name}</p>
-                                 <p className='text-[10px] text-[#e2626b]'>{number}</p>
-                              </span>
-                              <p className='text-[14px] font-[700]'>{jobTitle}</p>
-                              <div className='flex gap-2 '>
-                                 <span className='text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skillOne}</span>
-                                 <span className='text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skillTow}</span>
-                                 <span className='text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skillThree}</span>
+                           <div className='flex gap-6'
+                           >
+                              <div className='max-w-[80px] max-h-[80px] rounded-full  img-shadow'>
+                                 <img src={image} alt="profile" className='w-full rounded-full' />
+                              </div>
+                              <div className='flex flex-col gap-2'>
+                                 <span className='flex gap-1 items-center'>
+                                    <p className='font-[700]'>{name}</p>
+                                    <p className='text-[10px] text-[#e2626b]'>{number}</p>
+                                 </span>
+                                 <p className='text-[14px] font-[700]'>{jobTitle}</p>
+                                 <div className='flex gap-2 '>
+                                    <span className='text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skillOne}</span>
+                                    <span className='text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skillTow}</span>
+                                    <span className='text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skillThree}</span>
+                                 </div>
                               </div>
                            </div>
+                           <p className='text-[12px] mt-3 space-y-1'>{description.slice(0, 138)}..</p>
+                           <p className='text-[12px] mt-5'>Industries:
+                              <span className='underline'>{inOne}</span>
+                              ,
+                              <span className='underline'>{inTow}</span>
+                           </p>
                         </div>
-                        <p className='text-[12px] mt-3 space-y-1'>{description.slice(0, 138)}..</p>
-                        <p className='text-[12px] mt-5'>Industries:
-                           <span className='underline'>{inOne}</span>
-                           ,
-                           <span className='underline'>{inTow}</span>
-                        </p>
                         <div className='mt-[10px] flex w-full'>
                            <button className='w-[50%]'>
                               <a
