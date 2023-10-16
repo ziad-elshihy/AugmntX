@@ -10,11 +10,10 @@ const App = () => {
       <>
          <Header />
          <Routes>
-            <Route path="/profiles" element={<Profiles />} />
+            <Route path="/" element={<Profiles />} />
             <Route path="profile">
-               <Route path=":unique_id" element={<User />} />
+               <Route path=":profile_url/:unique_id" element={<User />} />
             </Route>
-            <Route path="*" element={<Profiles />} />
          </Routes>
          <FixedButtons />
          <Footer />

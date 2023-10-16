@@ -25,8 +25,8 @@ const Article = () => {
       fetchData()
    }, [])
 
-   const goUser = (unique_id) => {
-      navigate(`profile/${unique_id}`)
+   const goUser = (profile_url,unique_id) => {
+      navigate(`profile/${profile_url.toLowerCase()}/${unique_id}`)
    }
    return (
       <section className='w-[100%] lg:w-[75%] py-[50px] px-[15px]'>
@@ -47,7 +47,7 @@ const Article = () => {
                         className='shadow cursor-pointer'
                      >
                         <div
-                           onClick={() => goUser(unique_id)}
+                           onClick={() => goUser(profile_url, unique_id)}
                         >
                            <div className='flex gap-6'
                            >
@@ -63,7 +63,7 @@ const Article = () => {
                                  <div className='flex gap-2 '>
                                     {
                                        skills.map((skill, index) => {
-                                          return <span key={index} className=' overflow-x-hidden text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skill.slice(0,7)}..</span>
+                                          return <span key={index} className=' overflow-x-hidden text-[10px] px-[8px] rounded-lg border-solid border border-blue-400'>{skill.slice(0, 7)}..</span>
                                        }).slice(0, 3)
                                     }
                                  </div>
