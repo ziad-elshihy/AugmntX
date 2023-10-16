@@ -74,7 +74,8 @@ ul.drop-down {
 }
 
 .show-header {
-   background-color: white;
+   background-color: #fffffff7;
+   box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.06);
    transform: translateY(0);
 }
 

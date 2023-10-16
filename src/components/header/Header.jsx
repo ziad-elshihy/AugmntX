@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import image from '../../assets/AugmntX-Logo.png'
-import { MdKeyboardArrowDown } from 'react-icons/md'
+import { TiArrowSortedDown } from 'react-icons/ti'
 import { FaBars } from 'react-icons/fa'
 
 
@@ -37,7 +37,7 @@ const Header = () => {
    return (
       <>
          <header
-            className={`text-[#343f52;] fixed h-[60px] w-full z-[999] flex items-center header ${show}`}
+            className={`text-[#343f52;] fixed h-[60px] w-full z-[99] flex items-center header ${show}`}
          >
             <nav className='container flex items-center justify-between'>
                <div >
@@ -79,7 +79,7 @@ const Header = () => {
                         className='relative text-[#343F52] text-[16px] font-[700] py-[24px] px-[20px] flex items-center transition ease-in-out delay-100 hover:text-[#5271ff]'
                      >
                         Industries
-                        <MdKeyboardArrowDown className='text-[#5271FF]' />
+                        <TiArrowSortedDown className='text-[#5271FF]' />
                      </a>
                      <ul className='drop-down'>
                         <li >

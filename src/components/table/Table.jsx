@@ -56,7 +56,7 @@ const Table = ({ data }) => {
             </div>
 
 
-            <div className="flex justify-between lg:justify-normal gap-16 lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] items-start flex-col lg:flex-row ">
+            <div className="flex justify-between lg:justify-normal gap-2 lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] items-start flex-col lg:flex-row ">
                <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]   flex items-center gap-2">
                   <AiOutlineSetting />Projects
                </span>
