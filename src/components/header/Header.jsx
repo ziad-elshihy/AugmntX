@@ -14,9 +14,9 @@ const Header = () => {
 
    const scrollHandler = () => {
       if (window.scrollY > 67) {
-         setShow('hide')
+         setShow('hide-header')
          if (window.scrollY > 400) {
-            setShow("show");
+            setShow("show-header");
          }
       }
       else {
@@ -37,7 +37,7 @@ const Header = () => {
    return (
       <>
          <header
-            className={`text-[#343f52;] fixed h-[60px] w-full z-50 flex items-center header ${show}`}
+            className={`text-[#343f52;] fixed h-[60px] w-full z-[999] flex items-center header ${show}`}
          >
             <nav className='container flex items-center justify-between'>
                <div >
@@ -130,7 +130,7 @@ const Header = () => {
                      </a>
                   </li>
                   <li>
-                     <a href="#" className='relative text-white bg-[#5271FF] rounded-full text-[14px] font-[700] py-[12px] px-[25px] btn-hire' >
+                     <a href="#" className=' relative text-white bg-[#5271FF] rounded-full text-[14px] font-[700] py-[12px] px-[25px] btn-hire' >
                         Hire Dev
                      </a>
                   </li>

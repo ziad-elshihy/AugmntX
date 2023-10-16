@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Buttons from "../Buttons"
 
 import { BsCalendarCheck, BsCodeSlash } from 'react-icons/bs'
@@ -6,7 +7,8 @@ import { AiOutlineSetting } from 'react-icons/ai'
 import { MdWorkOutline, MdOutlineSchool } from 'react-icons/md'
 import { IoLanguageSharp } from 'react-icons/io5'
 
-const Table = () => {
+const Table = ({ data }) => {
+
    return (
       <main className='container'>
          <Buttons />
@@ -15,7 +17,7 @@ const Table = () => {
                <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%] flex items-center gap-3">
                   <BsCalendarCheck />Availability
                </span>
-               <span className="text-[#60697b] text-[16px]">Full-time</span>
+               <span className="text-[#60697b] text-[16px]">{data.profile_info?.comittment}</span>
             </div>
 
 
@@ -23,7 +25,7 @@ const Table = () => {
                <span className="font-[700] text-[#343f52] text-[18px] w-[70%] lg:w-[25%]  flex items-center gap-2">
                   <CgSandClock />Total experience
                </span>
-               <span className="text-[#60697b] text-[16px]">7 years</span>
+               <span className="text-[#60697b] text-[16px]">{data.profile_info?.experience} years</span>
             </div>
 
 
@@ -33,38 +35,22 @@ const Table = () => {
                </span>
                <span className="flex justify-between w-full lg:w-[60%] lg:gap-10">
                   <span className="text-[#60697b] text-[16px] flex flex-col gap-4 ">
-                     <span>
-                        Python
-                     </span>
-                     <span>
-                        Flask
-                     </span>
-                     <span>
-                        Django
-                     </span>
-                     <span>
-                        Django REST Framework
-                     </span>
-                     <span>
-                        GraphQL
-                     </span>
+                     {
+                        data.skills?.map((skill) => {
+                           return <span key={skill.id}>
+                              {skill.name}
+                           </span>
+                        })
+                     }
                   </span>
                   <span className="text-[#60697b] text-[16px] flex flex-col gap-4">
-                     <span>
-                        7 Years
-                     </span>
-                     <span>
-                        7 Years
-                     </span>
-                     <span>
-                        7 Years
-                     </span>
-                     <span>
-                        7 Years
-                     </span>
-                     <span>
-                        7 Years
-                     </span>
+                     {
+                        data.skills?.map((skill) => {
+                           return <span key={skill.id}>
+                              {skill.year} Years
+                           </span>
+                        })
+                     }
                   </span>
                </span>
             </div>
@@ -75,66 +61,43 @@ const Table = () => {
                   <AiOutlineSetting />Projects
                </span>
                <span className="text-[#60697b] text-[18px] w-full lg:w-[65%] ">
-                  <span>
-                     <h3 className="text-black font-[700] mb-[15px] pl-[20px] title">
-                        CLEARAGO
-                     </h3>
-                     <span className=" text-[16px] block leading-7 border-l border-dashed border-l-black pl-[20px] ">
-                        <p className='font-[700]'>
-                           Description
-                        </p>
-                        <p>
-                           This project is all about all types of waste containers so customers can buy containers on rent throughout Germany. ● This project is built in Backend with Python Django Rest API and Frontend with Angular. ● In this project I'm working on the backend side where I create API and handle the flow of orders creating components and adding new models as per requirements. ● In the backend we used django oscarmode. ● I'm working on binding the API and fixing small issues in angular. ● In this project we crawl competitor website data and compare the pricing and we showed in our project. ● To create Automated backups and Invoice generation and upload invoice on S3 bucket used AWS Lambda. ● To create reports of daily web server logs used AWS Data Pipelines along with AWS S3 bucket. ● Technology Stack: Django REST Framework, PostGreSQL, Celery, Swagger (For Documentation)
-                        </p>
-                        <p className='font-[700]'>
-                           Roles and Responsibilities
-                        </p>
-                        <p>
-                           Worked as a Sr Backend Developer and managed a team of 4 developers. Handle the client communication.
-                        </p>
-                        <p className='font-[700]'>
-                           Technologies:
-                           <span className="font-500">
-                              Python
+                  {
+                     data.projects?.map((project) => {
+                        return (
+                           <span key={project.id}>
+                              <h3 className="text-black font-[700] my-[15px] pl-[20px] title">
+                                 {project.title}
+                              </h3>
+                              <span className=" text-[16px] block leading-7 border-l border-dashed border-l-black pl-[20px] ">
+                                 <p className='font-[700]'>
+                                    Description
+                                 </p>
+                                 <p>
+                                    {project.description}
+                                 </p>
+                                 <p className='font-[700]'>
+                                    Roles and Responsibilities
+                                 </p>
+                                 <p>
+                                    {project.responsibilities}
+                                 </p>
+                                 <p className='font-[700]'>
+                                    Technologies:&nbsp;
+                                    <span className="font-500">
+                                       {project.technologies}
+                                    </span>
+                                 </p>
+                                 <p className='font-[700]'>
+                                    Industry:&nbsp;
+                                    <span className="font-500">
+                                       {project.industry}
+                                    </span>
+                                 </p>
+                              </span>
                            </span>
-                        </p>
-                        <p className='font-[700]'>
-                           Industry:
-                           <span className="font-500">
-                              Ecommerce
-                           </span>
-                        </p>
-
-                     </span>
-                  </span>
-                  <span>
-                     <h3 className="text-black font-[700] my-[15px] pl-[20px] title">
-                        Food Delivery App
-                     </h3>
-                     <span className="text-[16px] block leading-7 border-l border-dashed border-l-black pl-[20px]">
-                        <p className='font-[700]'>
-                           Description
-                        </p>
-                        <p>
-                           Developed in Django REST Framework, This have developed backend(APIs) of 3 apps (for customer, for vendor, for delivery), Developed only backend using APIs for all the types of scenarios like store-display, calculations, trending products, bill calculations for all 3 apps
-                        </p>
-                        <p className='font-[700]'>
-                           Roles and Responsibilities
-                        </p>
-                        <p>
-                           Worked as a Sr Backend Developer and managed a team of 3 developers. Handle the client communication.
-                        </p>
-                        <p>
-                           Technologies: Django, Django REST Framework, PostGreSQL Celery, Swagger
-                        </p>
-                        <p className='font-[700]'>
-                           Industry:
-                           <span className='font-[500]'>
-                              Food Delivery
-                           </span>
-                        </p>
-                     </span>
-                  </span>
+                        )
+                     })
+                  }
                </span>
             </div>
 
@@ -143,7 +106,13 @@ const Table = () => {
                <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]  flex items-center gap-2">
                   <MdWorkOutline />Work history
                </span>
-               <span className="text-[#60697b] text-[16px]">Sr Python Developer</span>
+               <span className="text-[#60697b] text-[16px]">
+                  {
+                     data.experience === null 
+                     ? 'None'
+                     : data.experience?.map((item) => item.title)
+                  }
+               </span>
             </div>
 
             <div className="flex justify-between items-start lg:justify-normal lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] ">
@@ -153,13 +122,13 @@ const Table = () => {
                <span className="text-[#60697b] text-[16px] flex flex-col lg:flex-row  gap-3 ">
                   <span className="flex flex-col ">
                      <span>
-                        Bachelors degree in IT
+                        {data.education?.map((item) => item.degree)} degree in {data.education?.map((item) => item.major)}
                      </span>
                      <span className="text-[#aab0bc]">
-                        GTU
+                        {data.education?.map((item) => item.univ)}
                      </span>
                      <span className="text-[#aab0bc]">
-                        2012 to 2016
+                        {data.education?.map((item) => item.edu_start)} to {data.education?.map((item) => item.edu_end)}
                      </span>
                   </span>
 
@@ -170,7 +139,7 @@ const Table = () => {
                <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]  flex items-center gap-2">
                   <IoLanguageSharp />Language
                </span>
-               <span className="text-[#60697b] text-[16px]">English - Advanced</span>
+               <span className="text-[#60697b] text-[16px]">English - {data.profile_info?.english}</span>
             </div>
          </div>
          <Buttons />

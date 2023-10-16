@@ -51,7 +51,7 @@ useEffect(() => {
                   <IoLogoWhatsapp size={30} />
                </span>
             </div>
-            <div className='p-[5px] icon rounded-[40%] mt-5 text-[#5271ff] cursor-pointer'>
+            <div className='p-[5px] bg-white icon rounded-[40%] mt-5 text-[#5271ff] cursor-pointer'>
                <BiMessage size={30} />
             </div>
          </div>

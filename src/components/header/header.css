@@ -73,11 +73,11 @@ ul.drop-down {
    background: #f3fafe;
 }
 
-.show {
+.show-header {
    background-color: white;
    transform: translateY(0);
 }
 
-.hide {
+.hide-header {
    transform: translateY(-60px);
 }
