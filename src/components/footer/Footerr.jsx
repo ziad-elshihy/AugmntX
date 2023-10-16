@@ -82,8 +82,8 @@ const Footer = () => {
                </li>
             </ul>
          </div>
-         <div className='container py-[25px] flex flex-col md:flex-col lg:flex-row items-center justify-center gap-5 md:justify-center lg:justify-between'>
-            <div className='flex flex-col md:flex-row lg:flex-row  items-center'>
+         <div className='container py-[25px] flex flex-col md:flex-col lg:flex-row items-center justify-center gap-3 md:justify-center lg:justify-between'>
+            <div className='flex gap-3 md:gap-0 lg:gap-0 flex-col md:flex-row lg:flex-row  items-center'>
                <span>
                   <span className='text-[#D3D3D3]'>© 2022 - 2023</span>
                   <span className='text-[14px] md:text-[20px] lg:text-[20px] px-[10px] font-[600]'>AugmntX</span>

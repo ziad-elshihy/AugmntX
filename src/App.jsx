@@ -12,7 +12,7 @@ const App = () => {
          <Routes>
             <Route path="/profiles" element={<Profiles />} />
             <Route path="profile">
-               <Route path=":profile_url/:unique_id" element={<User />} />
+               <Route path=":unique_id" element={<User />} />
             </Route>
             <Route path="*" element={<Profiles />} />
          </Routes>

@@ -25,10 +25,8 @@ const Article = () => {
       fetchData()
    }, [])
 
-   const goUser = (profile_url, unique_id) => {
-      const id = unique_id
-      const p_url = profile_url.toLowerCase()
-      navigate(`profile/${p_url}/${id}`)
+   const goUser = (unique_id) => {
+      navigate(`profile/${unique_id}`)
    }
    return (
       <section className='w-[100%] lg:w-[75%] py-[50px] px-[15px]'>
@@ -49,7 +47,7 @@ const Article = () => {
                         className='shadow cursor-pointer'
                      >
                         <div
-                           onClick={() => goUser(profile_url,unique_id)}
+                           onClick={() => goUser(unique_id)}
                         >
                            <div className='flex gap-6'
                            >
