@@ -10,7 +10,7 @@ const FixedButtons = () => {
    const [scroll, setScroll] = useState(0)
 
    const showButton = () => {
-      if (window.scrollY > 350) {
+      if (window.scrollY > 100) {
          setShow(true)
       } else {
          setShow(false)

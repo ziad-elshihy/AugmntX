@@ -30,36 +30,36 @@ const BasicInfo = () => {
                      {devData[1].status}
                   </span>
                </div>
-               <h3 className='text-[20px] font-[500]'>
+               <h3 className='text-[18px]'>
                   {devData[1].jobTitle}
                </h3>
-               <p className='text-[17px] text-[#60697b] leading-7'>
+               <p className='text-[14px] text-[#60697b] leading-7'>
                   {devData[1].description}
                </p>
             </div>
          </div>
          <div className='flex flex-wrap gap-3'>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
+            <span className=' text-[12px] cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillOne}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
+            <span className=' text-[12px] cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillTow}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
+            <span className=' text-[12px] cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillThree}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
+            <span className=' text-[12px] cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillOne}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
+            <span className=' text-[12px] cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillTow}
             </span>
-            <span className=' cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
+            <span className=' text-[12px] cursor-pointer py-[2px] px-3 border-solid border-2 border-blue-400 rounded-full hover:bg-blue-300 '>
                {devData[1].skills.skillThree}
             </span>
          </div>
          <div>
-            <p className='text-[20px] font-[700] mt-5'>Industries :
+            <p className='text-[16px] font-[700] mt-5'>Industries :
                <span className='underline font-[500] text-[#60697b]'> {devData[1].industries.inOne}</span>
                ,
                <span className='underline font-[500] text-[#60697b]'>{devData[1].industries.inTow}</span>

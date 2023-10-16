@@ -10,29 +10,29 @@ const Table = () => {
    return (
       <main className='container'>
          <Buttons />
-         <div className="border-t-2 border-solid border-slate-300 divide-y divide-slate-300 w-full min-h-screen py-5 ">
+         <div className="border-y border-solid border-slate-300 divide-y divide-slate-300 w-full min-h-screen py-5 ">
             <div className="flex justify-between lg:justify-normal lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] ">
-               <span className="font-[700] text-[#343f52] text-[20px] w-[50%] lg:w-[25%] flex items-center gap-3">
+               <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%] flex items-center gap-3">
                   <BsCalendarCheck />Availability
                </span>
-               <span className="text-[#60697b] text-[18px]">Full-time</span>
+               <span className="text-[#60697b] text-[16px]">Full-time</span>
             </div>
 
 
             <div className="flex justify-between lg:justify-normal lg:gap-24 lg:px-[70px] py-[15px] mt-[5px]">
-               <span className="font-[700] text-[#343f52] text-[20px] w-[70%] lg:w-[25%]  flex items-center gap-2">
+               <span className="font-[700] text-[#343f52] text-[18px] w-[70%] lg:w-[25%]  flex items-center gap-2">
                   <CgSandClock />Total experience
                </span>
-               <span className="text-[#60697b] text-[18px]">7 years</span>
+               <span className="text-[#60697b] text-[16px]">7 years</span>
             </div>
 
 
             <div className="flex flex-col lg:flex-row justify-between lg:justify-normal gap-6 lg:gap-24 items-start lg:px-[70px] py-[15px] mt-[5px]  ">
-               <span className="font-[700] text-[#343f52] text-[20px] w-[50%] lg:w-[25%]   flex items-center gap-2">
+               <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]   flex items-center gap-2">
                   <BsCodeSlash />Technical skills
                </span>
                <span className="flex justify-between w-full lg:w-[60%] lg:gap-10">
-                  <span className="text-[#60697b] text-[18px] flex flex-col gap-4 ">
+                  <span className="text-[#60697b] text-[16px] flex flex-col gap-4 ">
                      <span>
                         Python
                      </span>
@@ -49,7 +49,7 @@ const Table = () => {
                         GraphQL
                      </span>
                   </span>
-                  <span className="text-[#60697b] text-[18px] flex flex-col gap-4">
+                  <span className="text-[#60697b] text-[16px] flex flex-col gap-4">
                      <span>
                         7 Years
                      </span>
@@ -71,7 +71,7 @@ const Table = () => {
 
 
             <div className="flex justify-between lg:justify-normal gap-16 lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] items-start flex-col lg:flex-row ">
-               <span className="font-[700] text-[#343f52] text-[20px] w-[50%] lg:w-[25%]   flex items-center gap-2">
+               <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]   flex items-center gap-2">
                   <AiOutlineSetting />Projects
                </span>
                <span className="text-[#60697b] text-[18px] w-full lg:w-[65%] ">
@@ -79,7 +79,7 @@ const Table = () => {
                      <h3 className="text-black font-[700] mb-[15px] pl-[20px] title">
                         CLEARAGO
                      </h3>
-                     <span className="block leading-9 border-l-2 border-dashed border-l-black pl-[20px] ">
+                     <span className=" text-[16px] block leading-7 border-l border-dashed border-l-black pl-[20px] ">
                         <p className='font-[700]'>
                            Description
                         </p>
@@ -111,7 +111,7 @@ const Table = () => {
                      <h3 className="text-black font-[700] my-[15px] pl-[20px] title">
                         Food Delivery App
                      </h3>
-                     <span className="block leading-9 border-l-2 border-dashed border-l-black pl-[20px]">
+                     <span className="text-[16px] block leading-7 border-l border-dashed border-l-black pl-[20px]">
                         <p className='font-[700]'>
                            Description
                         </p>
@@ -140,17 +140,17 @@ const Table = () => {
 
 
             <div className="flex justify-between lg:justify-normal lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] ">
-               <span className="font-[700] text-[#343f52] text-[20px] w-[50%] lg:w-[25%]  flex items-center gap-2">
+               <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]  flex items-center gap-2">
                   <MdWorkOutline />Work history
                </span>
-               <span className="text-[#60697b] text-[18px]">Sr Python Developer</span>
+               <span className="text-[#60697b] text-[16px]">Sr Python Developer</span>
             </div>
 
             <div className="flex justify-between items-start lg:justify-normal lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] ">
-               <span className="font-[700] text-[#343f52] text-[20px] w-[25%]  flex items-center gap-2">
+               <span className="font-[700] text-[#343f52] text-[18px] w-[25%]  flex items-center gap-2">
                   <MdOutlineSchool />Education
                </span>
-               <span className="text-[#60697b] text-[18px] flex flex-col lg:flex-row  gap-3 ">
+               <span className="text-[#60697b] text-[16px] flex flex-col lg:flex-row  gap-3 ">
                   <span className="flex flex-col ">
                      <span>
                         Bachelors degree in IT
@@ -167,10 +167,10 @@ const Table = () => {
             </div>
 
             <div className="flex justify-between lg:justify-normal lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] ">
-               <span className="font-[700] text-[#343f52] text-[20px] w-[50%] lg:w-[25%]  flex items-center gap-2">
+               <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]  flex items-center gap-2">
                   <IoLanguageSharp />Language
                </span>
-               <span className="text-[#60697b] text-[18px]">English - Advanced</span>
+               <span className="text-[#60697b] text-[16px]">English - Advanced</span>
             </div>
          </div>
          <Buttons />

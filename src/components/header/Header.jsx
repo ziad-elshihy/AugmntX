@@ -130,8 +130,8 @@ const Header = () => {
                      </a>
                   </li>
                   <li>
-                     <a href="#" className='relative text-white bg-[#5271FF] rounded-[20px] text-[14px] font-[700] py-[12px] px-[25px] btn-hire' >
-                        Hire Talent
+                     <a href="#" className='relative text-white bg-[#5271FF] rounded-full text-[14px] font-[700] py-[12px] px-[25px] btn-hire' >
+                        Hire Dev
                      </a>
                   </li>
                   <li>
