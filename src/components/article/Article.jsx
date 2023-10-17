@@ -1,20 +1,23 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom'
 
 import { AiOutlineMessage, AiOutlineDownload } from 'react-icons/ai'
 import image from '../../assets/noimage.jpg'
 import Input from '../Input'
-import { useNavigate } from 'react-router-dom'
+import Pagination from '../Pagination'
 
 const Article = () => {
    const [data, setData] = useState([])
    const [searchValue, setSearchValue] = useState("")
    const navigate = useNavigate()
+   const [limit, setLimit] = useState(20)
 
    const fetchData = async () => {
       try {
-         const { data } = await axios.get('https://augmntx.com/api/profile_list')
+         const { data } = await axios.get(`https://augmntx.com/api/profile_list?limit=${limit}`)
          setData(data)
       } catch (err) {
          console.log(err)
@@ -23,13 +26,17 @@ const Article = () => {
 
    useEffect(() => {
       fetchData()
-   }, [])
+   }, [limit])
 
-   const goUser = (profile_url,unique_id) => {
+   const goUser = (profile_url, unique_id) => {
       navigate(`profile/${profile_url.toLowerCase()}/${unique_id}`)
+      scrollTo({
+         top: 0
+      })
    }
+
    return (
-      <section className='w-[100%] lg:w-[75%] py-[50px] px-[15px]'>
+      <section className='w-[100%] lg:w-[75%] pt-[50px] pb-[20px] md:px-[15px] lg:px-[15px]'>
          <Input
             setSearchValue={setSearchValue}
          />
@@ -51,8 +58,14 @@ const Article = () => {
                         >
                            <div className='flex gap-6'
                            >
-                              <div className='max-w-[80px] max-h-[80px] rounded-full  img-shadow'>
-                                 <img src={userPhoto === true ? userPhoto : image} alt="profile" className='w-full rounded-full' />
+                              <div
+                                 className='min-w-[80px] min-h-[80px] max-w-[80px] max-h-[80px]  md:min-w-[200px] md:min-h-[200px] lg:w-[80px] lg:h-[80px] lg:min-w-[80px] lg:min-h-[80px] rounded-full  img-shadow'
+                              >
+                                 <img
+                                    src={userPhoto === true ? userPhoto : image}
+                                    alt="profile"
+                                    className='w-full h-full rounded-full'
+                                 />
                               </div>
                               <div className='flex flex-col gap-2'>
                                  <span className='flex gap-1 items-center'>
@@ -108,6 +121,9 @@ const Article = () => {
                })
             }
          </div>
+         {
+            data.length > 0 && <Pagination setLimit={setLimit} />
+         }
       </section>
    )
 }

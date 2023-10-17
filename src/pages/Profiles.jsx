@@ -1,5 +1,3 @@
-// import React from 'react'
-
 import Article from "../components/article/Article"
 import Aside from "../components/aside/Aside"
 import Features from "../components/features/Features"

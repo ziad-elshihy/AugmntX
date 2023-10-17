@@ -15,10 +15,6 @@
    padding: 0;
 }
 
-html {
-   scroll-behavior: smooth;
-}
-
 body {
    font-family: 'Manrope', sans-serif;
    background-color: #fefefe;
