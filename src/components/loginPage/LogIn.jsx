@@ -31,7 +31,7 @@ const LogIn = () => {
                </div>
             </div>
          </div>
-         <div className="mt-[15px] text-[#60697B] text-[16px] text-center">
+         <div className="mt-6 text-[#60697B] text-[16px] text-center">
             <p>
                Don&apos;t have an account? <a href="#" className="text-[#5271FF]">Sign up</a>
             </p>
