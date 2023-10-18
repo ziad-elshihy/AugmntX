@@ -64,7 +64,7 @@ svg {
 }
 
 .shadow {
-   padding: 10px;
+   padding: 12px;
    border-radius: 0.4rem;
    box-shadow: 0rem 0.25rem 1.75rem rgba(30, 34, 40, 0.07);
 }

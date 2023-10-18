@@ -4,6 +4,7 @@ import Profiles from "./pages/Profiles";
 import User from "./pages/User";
 import { Route, Routes } from "react-router-dom";
 import FixedButtons from "./components/FixedButtons";
+import LogIn from "./components/loginPage/LogIn";
 
 const App = () => {
    return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="profile">
                <Route path=":profile_url/:unique_id" element={<User />} />
             </Route>
+            <Route path="/login" element={<LogIn />} />
          </Routes>
          <FixedButtons />
          <Footer />
