@@ -1,16 +1,21 @@
 import { GoogleLogin } from '@react-oauth/google';
-// import jwt from 'jsonwebtoken';
+import jwt_decode from "jwt-decode";
+import { useState } from 'react';
 
 const LogInGoogle = () => {
-
+   const [user, setUser] = useState([])
    const onSuccess = (credentialResponse) => {
-      console.log(credentialResponse);
+      const decodedCredentialResponse = jwt_decode(
+         credentialResponse.credential
+      )
+      setUser([...user ,decodedCredentialResponse])
+      console.log(decodedCredentialResponse);
    }
 
    const onError = () => {
       console.log('Login Failed');
    }
-
+   
    return (
       <GoogleLogin
          theme='filled_blue'
