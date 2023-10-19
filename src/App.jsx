@@ -4,7 +4,7 @@ import Profiles from "./pages/Profiles";
 import User from "./pages/User";
 import { Route, Routes } from "react-router-dom";
 import FixedButtons from "./components/FixedButtons";
-import LogIn from "./components/loginPage/LogIn";
+import LogIn from "./pages/LogIn";
 
 const App = () => {
    return (

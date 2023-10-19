@@ -5,20 +5,23 @@ import axios from "axios"
 import BasicInfo from "../components/info/BasicInfo"
 import TableDetails from "../components/TableDetails"
 import ContactSec from "../components/Contact/ContactSec"
+import CircularProgress from '@mui/joy/CircularProgress';
 
 const User = () => {
    const params = useParams()
    const [data, setData] = useState({})
+   const [isLoading, setIsLoading] = useState(true)
 
    const fetchUserData = async () => {
       try {
          const { data } = await axios.get(`https://augmntx.com/api/profile/${params.unique_id}`)
          setData(data)
+         setIsLoading(false)
       } catch (err) {
          console.log("Error" + err)
       }
    }
-   
+
    useEffect(() => {
       fetchUserData()
    }, [params.unique_id])
@@ -26,10 +29,23 @@ const User = () => {
 
 
    return (
-      <div className="min-h-screen ">
-         <BasicInfo data={data} />
-         <TableDetails data={data} />
-         <ContactSec />
+
+
+      <div className="min-h-screen min-w-full">
+         {
+            isLoading
+               ? <div className="w-full h-screen grid place-items-center">
+                  <CircularProgress
+                     size="lg"
+                     variant="soft"
+                  />
+               </div>
+               : <>
+                  <BasicInfo data={data} />
+                  <TableDetails data={data} />
+                  <ContactSec />
+               </>
+         }
       </div>
    )
 }
