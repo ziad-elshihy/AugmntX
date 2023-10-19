@@ -19,7 +19,7 @@ const Buttons = ({ id, u_id, p_url, f_name, l_name }) => {
          <button className='hover:translate-y-[-5px] transition delay-100 '>
             <span
                onClick={handleShare}
-               className='text-[#343f52] w-fit transition delay-100 font-[700] hover:text-white rounded-lg hover:bg-[#5271FF] flex items-center justify-center text-[12px] md:text-[16px] lg:text-[16px] px-[20px] py-1'
+               className='text-[#343f52] w-fit transition delay-100 font-[700] hover:text-white rounded-lg hover:bg-[#5271FF] flex items-center justify-center gap-2 text-[12px] md:text-[16px] lg:text-[16px] px-[20px] py-1'
             >
                <PiShareFat /> Share
             </span>
@@ -27,7 +27,7 @@ const Buttons = ({ id, u_id, p_url, f_name, l_name }) => {
          <button className='hover:translate-y-[-5px] transition delay-100 '>
             <a
                href="#"
-               className='text-[#343f52] w-fit transition delay-100 font-[700] hover:text-white rounded-lg hover:bg-[#5271FF] flex items-center justify-center text-[12px] md:text-[16px] lg:text-[186x] px-[20px] py-1'
+               className='text-[#343f52] w-fit transition delay-100 font-[700] hover:text-white rounded-lg hover:bg-[#5271FF] flex items-center justify-center gap-2 text-[12px] md:text-[16px] lg:text-[186x] px-[20px] py-1'
             >
                <AiOutlineMessage />Hire {f_name} {l_name}
             </a>
@@ -35,7 +35,7 @@ const Buttons = ({ id, u_id, p_url, f_name, l_name }) => {
          <button className='hover:translate-y-[-5px] transition delay-100'>
             <a
                href={`https://www.augmntx.com/home/profile2pdf/${id}`}
-               className='text-[#343f52] w-fit transition delay-100 font-[700]  hover:text-white rounded-lg hover:bg-[#5271FF] flex items-center justify-center text-[12px] md:text-[16px] lg:text-[16px] px-[20px] py-1'
+               className='text-[#343f52] w-fit transition delay-100 font-[700]  hover:text-white rounded-lg hover:bg-[#5271FF] flex items-center justify-center gap-2 text-[12px] md:text-[16px] lg:text-[16px] px-[20px] py-1'
             >
                <AiOutlineDownload />Download PDF
             </a>

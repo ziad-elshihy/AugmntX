@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 import BasicInfo from "../components/info/BasicInfo"
-import Table from "../components/table/Table"
+import TableDetails from "../components/TableDetails"
 import ContactSec from "../components/Contact/ContactSec"
 
 const User = () => {
@@ -28,7 +28,7 @@ const User = () => {
    return (
       <div className="min-h-screen ">
          <BasicInfo data={data} />
-         <Table data={data} />
+         <TableDetails data={data} />
          <ContactSec />
       </div>
    )
