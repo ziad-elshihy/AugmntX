@@ -8,7 +8,7 @@ const LogIn = () => {
    useEffect(() => {
       setTimeout(() => {
          setIsLoading(false)
-      }, 600)
+      }, 700)
    }, [])
 
    return (

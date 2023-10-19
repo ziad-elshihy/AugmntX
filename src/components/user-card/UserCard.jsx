@@ -39,16 +39,16 @@ const UserCard = () => {
    }
 
    return (
-      <section className='w-[100%] lg:w-[75%] pt-[50px] pb-[20px] md:px-[15px] lg:px-[15px] min-h-screen'>
+      <>
          {
             isLoading
-               ? <div className='w-full min-h-[85%] grid place-items-center'>
+               ? <div className='w-full min-h-screen grid place-items-center'>
                   < CircularProgress
                      size="lg"
                      variant="soft"
                   />
                </div>
-               : <>
+               : <section className='w-[100%] lg:w-[75%] pt-[50px] pb-[20px] md:px-[15px] lg:px-[15px] min-h-screen'>
                   <Input
                      setSearchValue={setSearchValue}
                   />
@@ -150,9 +150,9 @@ const UserCard = () => {
                   {
                      data.length > 0 && <Pagination setLimit={setLimit} />
                   }
-               </>
+               </section>
          }
-      </section>
+      </>
    )
 }
 
