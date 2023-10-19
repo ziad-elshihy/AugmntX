@@ -6,9 +6,14 @@ import { useState } from 'react'
 
 
 import './header.css'
+import { Link } from 'react-router-dom'
 const SideMenu = ({ mobileMenu, setMobileMenu }) => {
    const [showMenu, setShowMenu] = useState(false)
 
+   const closeSideMenu = () => {
+      window.scrollTo({ top: 0 })
+      setMobileMenu(false)
+   }
    return (
       <>
          <div
@@ -90,9 +95,13 @@ const SideMenu = ({ mobileMenu, setMobileMenu }) => {
                   </a>
                </li>
                <li className='mb-[25px]'>
-                  <a href="" className=' block  text-[16px] font-[700] py-[10px]' >
+                  <Link
+                     onClick={closeSideMenu}
+                     to="/login"
+                     className=' block  text-[16px] font-[700] py-[10px]'
+                  >
                      Login
-                  </a>
+                  </Link>
                </li>
                <li className='mb-[25px]'>
                   <a href="https://augmntx.com/hire" className="block mb-1" >Hire Dev</a>

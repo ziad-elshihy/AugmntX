@@ -15,7 +15,7 @@ const Buttons = ({ id, u_id, p_url, f_name, l_name }) => {
    };
 
    return (
-      <div className='mx-auto py-[35px] gap-2 flex justify-between w-full lg:w-[50%]'>
+      <div className='mx-auto py-[35px] flex justify-between w-full lg:w-[50%]'>
          <button className='hover:translate-y-[-5px] transition delay-100 '>
             <span
                onClick={handleShare}
