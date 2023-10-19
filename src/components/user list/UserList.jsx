@@ -9,7 +9,7 @@ import { MdKeyboardArrowLeft } from 'react-icons/md'
 import Input from '../Input'
 import Pagination from '../Pagination'
 
-const Article = () => {
+const UserList = () => {
    const [data, setData] = useState([])
    const [searchValue, setSearchValue] = useState("")
    const navigate = useNavigate()
@@ -136,4 +136,4 @@ const Article = () => {
    )
 }
 
-export default Article;
+export default UserList;

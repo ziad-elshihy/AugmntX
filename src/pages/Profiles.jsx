@@ -1,4 +1,4 @@
-import Article from "../components/article/Article"
+import UserList from "../components/user list/UserList"
 import Aside from "../components/aside/Aside"
 import Features from "../components/features/Features"
 
@@ -7,7 +7,7 @@ const Profiles = () => {
       <>
          <main className="container flex flex-col-reverse lg:flex-row  w-full pt-[60px]">
             <Aside />
-            <Article />
+            <UserList />
          </main>
          <Features />
       </>
