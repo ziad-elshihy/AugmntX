@@ -6,6 +6,7 @@ import { FaBars } from 'react-icons/fa'
 
 import './header.css'
 import SideMenu from './SideMenu'
+import { Link } from 'react-router-dom'
 const Header = () => {
    const [show, setShow] = useState('top')
    const [lastScrollY, setLastScrollY] = useState(0);
@@ -41,15 +42,15 @@ const Header = () => {
          >
             <nav className='container flex items-center justify-between'>
                <div >
-                  <a href='https://augmntx.com/'
-                     className=''
+                  <Link
+                     to='/'
                   >
                      <img
                         src={image}
                         alt="logo"
                         className='w-[135px]'
                      />
-                  </a>
+                  </Link>
                </div>
                {/* Icon display in md and sm */}
                <div className='lg:hidden flex items-center gap-5'>
@@ -135,9 +136,12 @@ const Header = () => {
                      </a>
                   </li>
                   <li>
-                     <a href="" className='text-[#343F52] text-[16px] font-[700] py-[24px] px-[20px] transition ease-in-out delay-100 hover:text-[#5271ff]' >
+                     <Link
+                        to="/login"
+                        className='text-[#343F52] text-[16px] font-[700] py-[24px] px-[20px] transition ease-in-out delay-100 hover:text-[#5271ff]'
+                     >
                         Login
-                     </a>
+                     </Link>
                   </li>
                </ul>
             </nav>
