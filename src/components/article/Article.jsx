@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 
 import { AiOutlineMessage, AiOutlineDownload } from 'react-icons/ai'
-import image from '../../assets/noimage.jpg'
+import { MdKeyboardArrowLeft } from 'react-icons/md'
 import Input from '../Input'
 import Pagination from '../Pagination'
 
@@ -59,20 +59,29 @@ const Article = () => {
                            <div className='flex gap-6'
                            >
                               <div
-                                 className='min-w-[80px] min-h-[80px] max-w-[80px] max-h-[80px]  md:min-w-[200px] md:min-h-[200px] lg:w-[80px] lg:h-[80px] lg:min-w-[80px] lg:min-h-[80px] rounded-full  img-shadow'
+                                 className='min-w-[100px] min-h-[100px] max-w-[100px] max-h-[100px]  md:min-w-[200px] md:min-h-[200px] lg:w-[100px] lg:h-[100px] lg:min-w-[100px] lg:min-h-[100px] rounded-full  img-shadow'
                               >
                                  <img
-                                    src={userPhoto === true ? userPhoto : image}
+                                    src={
+                                       userPhoto === 'https://augmntx.com/assets/img/noimage.jpg'
+                                          ? 'https://augmntx.com/assets/img/noimage.jpg'
+                                          : `https://www.augmntx.com/${userPhoto}`
+                                    }
                                     alt="profile"
                                     className='w-full h-full rounded-full'
                                  />
                               </div>
                               <div className='flex flex-col gap-2'>
                                  <span className='flex gap-1 items-center'>
-                                    <p className='font-[700]'>{first_name} {last_name}</p>
+                                    <p className='font-[700]'>{last_name} {first_name}</p>
                                     <p className='text-[10px] text-[#e2626b]'>{unique_id}</p>
                                  </span>
-                                 <p className='text-[14px] font-[700]'>{primary_title}, {experience} years</p>
+                                 <p className='text-[14px] font-[700] flex items-center '>
+                                    {primary_title}{experience == 0
+                                       ? <span className='flex items-center gap-1'>,<MdKeyboardArrowLeft />1 years</span>
+                                       : `, ${experience} years`
+                                    }
+                                 </p>
                                  <div className='flex gap-2 '>
                                     {
                                        skills.map((skill, index) => {
@@ -108,8 +117,7 @@ const Article = () => {
                            </button>
                            <button className='w-[50%]'>
                               <a
-                                 href='Sr Python Developer 7 years ,DA R - AXO2408 - AugmntX'
-                                 download='PDF'
+                                 href={`https://www.augmntx.com/home/profile2pdf/${id}`}
                                  className='text-[#5271FF] flex items-center justify-center gap-1 text-[12px] px-[15px]'
                               >
                                  <AiOutlineDownload />Download PDF

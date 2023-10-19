@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import image from '../../assets/AugmntX-Logo.png'
 import { TiArrowSortedDown } from 'react-icons/ti'
 import { FaBars } from 'react-icons/fa'
 
@@ -46,7 +45,8 @@ const Header = () => {
                      to='/'
                   >
                      <img
-                        src={image}
+                        src='https://www.augmntx.com/assets/img/AugmntX-Logo.png'
+                        srcSet='https://www.augmntx.com/assets/img/AugmntX-Logo.png'
                         alt="logo"
                         className='w-[135px]'
                      />

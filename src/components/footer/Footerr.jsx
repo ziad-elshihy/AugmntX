@@ -1,12 +1,14 @@
-import image from '../../assets/augmntxlogo.png'
-
-
 const Footer = () => {
    return (
       <footer className='bg-black text-white pt-[70px]'>
          <div className="container flex flex-col md:flex-col lg:flex-row items-start gap-10 pb-[35px] border-solid border-b-[3px]">
-            <div className='w-[75%] md-w-[75%] lg:w-[25%]'>
-               <img src={image} alt="footer-logo" className='w-full' />
+            <div className='w-[75%] lg:w-[25%]'>
+               <img
+                  src='https://www.augmntx.com/assets/img/augmntxlogo.png'
+                  srcSet='https://www.augmntx.com/assets/img/augmntxlogo.png'
+                  alt="footer-logo"
+                  className='w-full'
+               />
             </div>
             <ul className='px-[15px] pb-[25px] flex flex-col gap-3' >
                <li className="text-[20px] font-[700]">
