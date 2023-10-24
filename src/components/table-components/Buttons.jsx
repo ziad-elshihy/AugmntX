@@ -2,7 +2,6 @@
 import { AiOutlineMessage, AiOutlineDownload } from 'react-icons/ai'
 import { PiShareFat } from 'react-icons/pi'
 
-
 const Buttons = ({ id, u_id, p_url, f_name, l_name }) => {
 
    const handleShare = () => {

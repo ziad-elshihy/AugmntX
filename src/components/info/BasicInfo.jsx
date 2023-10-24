@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaLongArrowAltLeft } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const BasicInfo = ({ data }) => {
    return (
@@ -7,7 +8,14 @@ const BasicInfo = ({ data }) => {
          <div className='flex items-center gap-1 text-[16px] text-[#AAB0BC]'>
             <span><FaLongArrowAltLeft /> </span>
             <span><a href="#" className='text-[#5271FF] font-[500]'>Home </a>/ </span>
-            <span><a href="#" className='text-[#5271FF] font-[500]'>Developers </a>/ </span>
+            <span>
+               <Link to='/'
+                  className='text-[#5271FF] font-[500]'
+               >
+                  Developers&nbsp;
+               </Link>
+               /
+            </span>
             <span>{data.profile_info?.unique_id}</span>
          </div>
          <div className='flex flex-col lg:flex-row gap-5 items-start justify-between '>
