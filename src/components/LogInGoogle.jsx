@@ -3,12 +3,12 @@ import jwt_decode from "jwt-decode";
 import { useState } from 'react';
 
 const LogInGoogle = () => {
-   const [user, setUser] = useState([])
+   const [user, setUser] = useState({})
    const onSuccess = (credentialResponse) => {
       const decodedCredentialResponse = jwt_decode(
          credentialResponse.credential
       )
-      setUser([...user ,decodedCredentialResponse])
+      setUser(decodedCredentialResponse)
       console.log(decodedCredentialResponse);
    }
 

@@ -4,7 +4,7 @@ import { BsPatchCheck } from "react-icons/bs"
 const Certifications = ({ data }) => {
    return (
       <div
-         className="flex flex-col lg:flex-row justify-between lg:justify-normal gap-6 lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] "
+         className="flex items-start flex-col lg:flex-row justify-between lg:justify-normal gap-6 lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] "
       >
          <span className="font-[700] text-[#343f52] text-[18px] w-[50%] lg:w-[25%]  flex items-center gap-2">
             <BsPatchCheck />Certifications

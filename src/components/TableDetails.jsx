@@ -21,7 +21,7 @@ const TableDetails = ({ data }) => {
             f_name={data.profile_info?.first_name}
             l_name={data.profile_info?.last_name}
          />
-         <div className="border-y border-solid border-slate-300 divide-y divide-slate-300 w-full min-h-screen py-5 ">
+         <div className="border-y border-solid border-slate-300 divide-y divide-slate-300 w-full min-h-screen ">
             <Availability data={data} />
             <TotalExperience data={data} />
             <TechnicalSkills data={data} />
