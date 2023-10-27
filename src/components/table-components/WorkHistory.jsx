@@ -9,7 +9,7 @@ const WorkHistory = ({ data }) => {
                className="flex flex-col lg:flex-row justify-between lg:justify-normal gap-6 lg:gap-24 lg:px-[70px] py-[15px] mt-[5px] items-start"
             >
                <span
-                  className="font-[700] text-[#343f52] text-[18px] w-[50%] xl:w-[39%]  flex items-center gap-2"
+                  className="font-[700] text-[#343f52] text-[18px] w-[25%] flex items-center gap-2"
                >
                   <MdWorkOutline />Work history
                </span>

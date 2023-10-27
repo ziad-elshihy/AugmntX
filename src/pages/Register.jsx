@@ -5,9 +5,6 @@ import { useNavigate } from "react-router-dom";
 import CircularProgress from '@mui/joy/CircularProgress';
 
 const Register = () => {
-
-
-
    const { setAuth } = useContext(AuthContext)
    const [formData, setFormData] = useState({
       first_name: '',
@@ -41,24 +38,6 @@ const Register = () => {
 
    const handleRegister = async (e) => {
       e.preventDefault();
-      if (formData.first_name === '') {
-         setFNameErr('The First name field is required.')
-      } if (formData.last_name === '') {
-         setLNameErr('The Last name field is required.')
-      } if (formData.org_name === '') {
-         setONameErr('The Organization field is required.')
-      } if (formData.email === '') {
-         setEmailErr('The Email field is required.')
-      } if (formData.tel.length <= 0) {
-         setTelErr('The Phone field is required.')
-         return false
-      } else {
-         setFNameErr('')
-         setLNameErr('')
-         setONameErr('')
-         setEmailErr('')
-         setTelErr('')
-      }
       try {
          const res = await axios.post('https://augmntx.com/api/register',
             formData,
@@ -69,11 +48,19 @@ const Register = () => {
                }
             }
          );
-         if (res?.status === 200) {
-            navigate('/login')
-         }
          setAuth(formData)
          console.log(res);
+         if (res.data.errors) {
+            const { first_name, last_name, org_name, email, tel } = res.data.errors
+            setFNameErr(first_name)
+            setLNameErr(last_name)
+            setONameErr(org_name)
+            setEmailErr(email)
+            setTelErr(tel)
+         }
+         if (res.status === 200 && !res.data.errors) {
+            navigate('/login')
+         }
          if (res.data.message === 'Registration successful') {
             alert(`Registration successful. Your password is ${res.data.password} keep it secret as you will use it to login`);
          } else {

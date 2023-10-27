@@ -35,11 +35,11 @@ const LogIn = () => {
          setAuth({ email, password })
          console.log(res);
       } catch (err) {
-         if (!err?.res) {
+         if (!err.res) {
             console.log('No Server Response');
-         } else if (err.res?.status === 400) {
+         } else if (err.res.status === 400) {
             console.log('400 Missing email and password');
-         } else if (err.res?.status === 401) {
+         } else if (err.res.status === 401) {
             console.log('401 Unauthorized');
          } else {
             console.log('Login failed');
@@ -103,7 +103,7 @@ const LogIn = () => {
             </div>
             <div className="mt-6 text-[#60697B] text-[16px] text-center">
                <p>
-                  Don&apos;t have an account? <a href="#" className="text-[#5271FF]">Sign up</a>
+                  Don&apos;t have an account? <Link to="/hire" className="text-[#5271FF]">Sign up</Link>
                </p>
                <p>
                   Please <a href="#" className="text-[#5271FF]">Contact us</a> if you require any assistance
