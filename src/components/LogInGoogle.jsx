@@ -9,7 +9,7 @@ const LogInGoogle = () => {
    const sendGoogleData = async () => {
       try {
          const res = await axios.post('https://augmntx.com/api/google',
-            user,
+            userData,
             {
                headers: { "Content-Type": "application/json" }
             }
