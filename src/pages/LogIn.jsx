@@ -4,14 +4,14 @@ import CircularProgress from '@mui/joy/CircularProgress';
 import axios from 'axios';
 import AuthContext from '../context/AuthProvider';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
    const [isLoading, setIsLoading] = useState(true)
    const { setAuth } = useContext(AuthContext)
    const [email, setEmail] = useState('')
    const [password, setPassword] = useState('')
-   const navigate = useNavigate()
+   // const navigate = useNavigate()
 
    useEffect(() => {
       setTimeout(() => {
@@ -21,6 +21,14 @@ const LogIn = () => {
 
    const handleSubmit = async (e) => {
       e.preventDefault();
+      if (email === '') {
+         alert('Can not be empty')
+         return
+      }
+      if (password === '') {
+         alert('Can not be empty')
+         return
+      }
       try {
          const res = await axios.post('https://augmntx.com/api/login',
             { email, password },
@@ -29,9 +37,9 @@ const LogIn = () => {
                // withCredentials: true
             }
          );
-         if (res?.status === 200) {
-            navigate('/')
-         }
+         // if (res?.status === 200) {
+         //    navigate('/')
+         // }
          setAuth({ email, password })
          console.log(res);
       } catch (err) {
